@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "npm": "8.1.2",
+    "node": "16.13.2"
+  },
+  "scripts": {
+    "start": "node  server.js",
+    "client-install":"cd client && npm install",
+    "start-client": "cd client && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-build":"cd client && npm run build",
+    "install-python-dependencies": "cd .. && pip install -r requirements.txt",
+    "heroku-postbuild":"npm run client-install && npm run client-build && npm run start-client && cd client && npm run install-python-dependencies"
+   
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,36 @@
+.Loadingspinner {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid rgba(122, 0, 179, 0); /* Set custom color here */
+    border-top-color: rgba(20, 19, 20, 0.795); /* Set custom color here */
+    border-bottom-color:rgba(238, 238, 238, 0.795); ;
+    animation: spin 500ms linear infinite;
+  }
+  
+  /* CSS for the spinner animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.loadingback{
+    width: 100%;
+    background-color:  rgba(128, 2, 187, 0.308);
+    top:0; 
+    bottom:0;
+    left:0;
+    z-index: 1000000;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    
+  }
+  
